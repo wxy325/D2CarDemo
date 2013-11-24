@@ -7,6 +7,10 @@
 //
 
 #import "WXYNearCarViewController.h"
+#import "WXYMyCarView.h"
+#import "WXYOtherCarView.h"
+
+
 
 @interface WXYNearCarViewController ()
 
@@ -27,6 +31,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    WXYMyCarView* car = [[WXYMyCarView alloc] init];
+    [self.view addSubview:car];
+    
 }
 
 - (void)didReceiveMemoryWarning

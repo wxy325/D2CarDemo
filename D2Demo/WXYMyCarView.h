@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WXYCar.h"
 
-@interface WXYMyCarView : UIView
+@interface WXYMyCarView : WXYCar
+
+- (id)init;
 
 @end

@@ -24,6 +24,8 @@
 		18636DF518425D510081459A /* WXYNearCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18636DF418425D510081459A /* WXYNearCarViewController.m */; };
 		18636DF8184260100081459A /* WXYMyCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18636DF7184260100081459A /* WXYMyCarView.m */; };
 		18636DFB1842601C0081459A /* WXYOtherCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18636DFA1842601C0081459A /* WXYOtherCarView.m */; };
+		18636DFE184263E60081459A /* WXYCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18636DFD184263E60081459A /* WXYCar.m */; };
+		18636E00184264E70081459A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18636DFF184264E70081459A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		18636DF7184260100081459A /* WXYMyCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYMyCarView.m; sourceTree = "<group>"; };
 		18636DF91842601C0081459A /* WXYOtherCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXYOtherCarView.h; sourceTree = "<group>"; };
 		18636DFA1842601C0081459A /* WXYOtherCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYOtherCarView.m; sourceTree = "<group>"; };
+		18636DFC184263E60081459A /* WXYCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXYCar.h; sourceTree = "<group>"; };
+		18636DFD184263E60081459A /* WXYCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYCar.m; sourceTree = "<group>"; };
+		18636DFF184264E70081459A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18636E00184264E70081459A /* QuartzCore.framework in Frameworks */,
 				18636DC118425BDB0081459A /* CoreGraphics.framework in Frameworks */,
 				18636DC318425BDB0081459A /* UIKit.framework in Frameworks */,
 				18636DBF18425BDB0081459A /* Foundation.framework in Frameworks */,
@@ -110,6 +116,7 @@
 		18636DBD18425BDB0081459A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18636DFF184264E70081459A /* QuartzCore.framework */,
 				18636DBE18425BDB0081459A /* Foundation.framework */,
 				18636DC018425BDB0081459A /* CoreGraphics.framework */,
 				18636DC218425BDB0081459A /* UIKit.framework */,
@@ -121,6 +128,7 @@
 		18636DC418425BDB0081459A /* D2Demo */ = {
 			isa = PBXGroup;
 			children = (
+				18636E01184266CB0081459A /* view */,
 				18636DCD18425BDB0081459A /* WXYAppDelegate.h */,
 				18636DCE18425BDB0081459A /* WXYAppDelegate.m */,
 				18636DD018425BDB0081459A /* Main.storyboard */,
@@ -130,10 +138,6 @@
 				18636DC518425BDB0081459A /* Supporting Files */,
 				18636DF318425D510081459A /* WXYNearCarViewController.h */,
 				18636DF418425D510081459A /* WXYNearCarViewController.m */,
-				18636DF6184260100081459A /* WXYMyCarView.h */,
-				18636DF7184260100081459A /* WXYMyCarView.m */,
-				18636DF91842601C0081459A /* WXYOtherCarView.h */,
-				18636DFA1842601C0081459A /* WXYOtherCarView.m */,
 			);
 			path = D2Demo;
 			sourceTree = "<group>";
@@ -165,6 +169,27 @@
 				18636DE618425BDB0081459A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18636E01184266CB0081459A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				18636E02184266D40081459A /* car */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		18636E02184266D40081459A /* car */ = {
+			isa = PBXGroup;
+			children = (
+				18636DF6184260100081459A /* WXYMyCarView.h */,
+				18636DF7184260100081459A /* WXYMyCarView.m */,
+				18636DF91842601C0081459A /* WXYOtherCarView.h */,
+				18636DFA1842601C0081459A /* WXYOtherCarView.m */,
+				18636DFC184263E60081459A /* WXYCar.h */,
+				18636DFD184263E60081459A /* WXYCar.m */,
+			);
+			name = car;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18636DF518425D510081459A /* WXYNearCarViewController.m in Sources */,
+				18636DFE184263E60081459A /* WXYCar.m in Sources */,
 				18636DCB18425BDB0081459A /* main.m in Sources */,
 				18636DD518425BDB0081459A /* WXYViewController.m in Sources */,
 				18636DFB1842601C0081459A /* WXYOtherCarView.m in Sources */,

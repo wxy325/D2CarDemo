@@ -10,11 +10,12 @@
 
 @implementation WXYMyCarView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    self = [super initWithImage:[UIImage imageNamed:@"mycar.png"]];
+    if (self)
+    {
+        
     }
     return self;
 }
