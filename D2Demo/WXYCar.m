@@ -8,6 +8,7 @@
 
 #import "WXYCar.h"
 
+
 @interface WXYCar ()
 
 @property (strong, nonatomic) UIImageView* carImageView;
