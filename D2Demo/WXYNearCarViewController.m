@@ -166,6 +166,10 @@
 
 - (IBAction)helpButtonPressed:(id)sender {
 }
+- (IBAction)evaluateButtonPressed:(id)sender
+{
+
+}
 - (IBAction)matchButtonPressed:(id)sender {
 }
 
