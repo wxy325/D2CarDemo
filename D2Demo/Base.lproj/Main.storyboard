@@ -78,6 +78,66 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ifV-4s-ZJv">
+                                <rect key="frame" x="418" y="912" width="50" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_comment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="evaluateButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="VRQ-Vk-QuV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oc0-MZ-NrJ">
+                                <rect key="frame" x="303" y="912" width="51" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="helpButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="uPm-TK-Dvm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BPd-VD-cHk">
+                                <rect key="frame" x="191" y="912" width="58" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_jinji">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dangerButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="By8-tZ-ZJr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ihz-9H-7cP">
+                                <rect key="frame" x="90" y="912" width="43" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="ta5-qJ-JeG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dqn-tO-CZP">
+                                <rect key="frame" x="524" y="912" width="50" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_match">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="matchButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="nSd-Lu-aXb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rzt-fF-OfK">
+                                <rect key="frame" x="629" y="912" width="50" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="Zld-xF-6gf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -88,6 +148,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button_comment" width="50" height="70"/>
+        <image name="button_help" width="51" height="71"/>
+        <image name="button_jinji" width="58" height="71"/>
+        <image name="button_login" width="43" height="70"/>
+        <image name="button_match" width="50" height="70"/>
+        <image name="button_setting" width="50" height="70"/>
         <image name="main_background" width="768" height="1024"/>
         <image name="main_bluetooth" width="80" height="80"/>
         <image name="main_music" width="80" height="80"/>

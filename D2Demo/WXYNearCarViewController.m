@@ -66,7 +66,7 @@
 - (void)startMyCar
 {
 
-    [UIView animateKeyframesWithDuration:5.f delay:0.f options:UIViewKeyframeAnimationOptionRepeat animations:^{
+    [UIView animateKeyframesWithDuration:5.f delay:1.5f options:UIViewKeyframeAnimationOptionRepeat animations:^{
         [UIView addKeyframeWithRelativeStartTime:0.f relativeDuration:0.02f animations:^{
             self.myCar.degree = 45.f;
         }];
@@ -157,5 +157,18 @@
     
     
     
+}
+- (IBAction)loginButtonPressed:(id)sender {
+}
+
+- (IBAction)dangerButtonPressed:(id)sender {
+}
+
+- (IBAction)helpButtonPressed:(id)sender {
+}
+- (IBAction)matchButtonPressed:(id)sender {
+}
+
+- (IBAction)settingButtonPressed:(id)sender {
 }
 @end

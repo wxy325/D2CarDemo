@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface WXYNearCarViewController : UIViewController
+- (IBAction)loginButtonPressed:(id)sender;
+- (IBAction)dangerButtonPressed:(id)sender;
+- (IBAction)helpButtonPressed:(id)sender;
+- (IBAction)evaluateButtonPressed:(id)sender;
+- (IBAction)matchButtonPressed:(id)sender;
+- (IBAction)settingButtonPressed:(id)sender;
 
 @end
