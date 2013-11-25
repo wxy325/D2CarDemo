@@ -18,5 +18,6 @@
 - (void)endWarning;
 - (void)beginFocus;
 - (void)endFocus;
-
+- (void)beginFlash;
+- (void)endFlash;
 @end

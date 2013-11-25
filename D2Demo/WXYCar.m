@@ -97,6 +97,32 @@
     self.circleImageView.hidden = YES;
 }
 
+- (void)beginFlash
+{
+    self.circleImageView.hidden = NO;
+    self.circleImageView.transform = CGAffineTransformMakeScale(1.f, 1.f);
+    [UIView animateKeyframesWithDuration:0.3f delay:0.f options:UIViewKeyframeAnimationOptionRepeat animations:^
+    {
+        [UIView addKeyframeWithRelativeStartTime:0.f relativeDuration:0.1f animations:^{
+            self.circleImageView.alpha = 0.f;
+        }];
+
+        [UIView addKeyframeWithRelativeStartTime:0.5f relativeDuration:0.1f animations:^{
+            self.circleImageView.alpha = 1.f;
+        }];
+    }
+                              completion:^(BOOL finished)
+    {
+        
+    }];
+    
+}
+- (void)endFlash
+{
+    [self.circleImageView.layer removeAllAnimations];
+    self.circleImageView.hidden = YES;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
