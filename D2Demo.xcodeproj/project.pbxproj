@@ -27,6 +27,7 @@
 		18636DFE184263E60081459A /* WXYCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18636DFD184263E60081459A /* WXYCar.m */; };
 		18636E00184264E70081459A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18636DFF184264E70081459A /* QuartzCore.framework */; };
 		18DE23351843B330005B8565 /* WXYHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE23341843B330005B8565 /* WXYHelpViewController.m */; };
+		18DE23381843C6AA005B8565 /* WXYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE23371843C6AA005B8565 /* WXYLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		18636DFF184264E70081459A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		18DE23331843B330005B8565 /* WXYHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXYHelpViewController.h; sourceTree = "<group>"; };
 		18DE23341843B330005B8565 /* WXYHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYHelpViewController.m; sourceTree = "<group>"; };
+		18DE23361843C6AA005B8565 /* WXYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXYLoginViewController.h; sourceTree = "<group>"; };
+		18DE23371843C6AA005B8565 /* WXYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				18636DF418425D510081459A /* WXYNearCarViewController.m */,
 				18DE23331843B330005B8565 /* WXYHelpViewController.h */,
 				18DE23341843B330005B8565 /* WXYHelpViewController.m */,
+				18DE23361843C6AA005B8565 /* WXYLoginViewController.h */,
+				18DE23371843C6AA005B8565 /* WXYLoginViewController.m */,
 			);
 			path = D2Demo;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				18DE23351843B330005B8565 /* WXYHelpViewController.m in Sources */,
 				18636DCB18425BDB0081459A /* main.m in Sources */,
 				18636DD518425BDB0081459A /* WXYViewController.m in Sources */,
+				18DE23381843C6AA005B8565 /* WXYLoginViewController.m in Sources */,
 				18636DFB1842601C0081459A /* WXYOtherCarView.m in Sources */,
 				18636DCF18425BDB0081459A /* WXYAppDelegate.m in Sources */,
 				18636DF8184260100081459A /* WXYMyCarView.m in Sources */,

@@ -7,19 +7,17 @@
 //
 
 #import "WXYNearCarViewController.h"
-#import "WXYMyCarView.h"
-#import "WXYOtherCarView.h"
-#import "WXYHelpViewController.h"
 
+#import "WXYHelpViewController.h"
+#import "WXYLoginViewController.h"
 
 
 @interface WXYNearCarViewController ()
 
-@property (strong, nonatomic) WXYMyCarView* myCar;
+
 
 @property (strong, nonatomic) UIStoryboard* storyBoard;
 
-@property (strong, nonatomic) WXYOtherCarView* carOne;
 
 
 
@@ -29,6 +27,15 @@
 @end
 
 @implementation WXYNearCarViewController
+- (WXYLoginViewController*)loginVC
+{
+    if (!_loginVC)
+    {
+        _loginVC = [self.storyBoard instantiateViewControllerWithIdentifier:@"WXYLoginViewController"];
+        _loginVC.vc = self;
+    }
+    return _loginVC;
+}
 - (WXYHelpViewController*)helpVC
 {
     if (!_helpVC)
@@ -61,12 +68,17 @@
     [super viewDidLoad];
 
     self.myCar = [[WXYMyCarView alloc] init];
-    [self.view addSubview:self.myCar];
+    [self.view insertSubview:self.myCar aboveSubview:self.bgView];
     self.myCar.center = CGPointMake(403, 555);
     
     self.carOne = [[WXYOtherCarView alloc] init];
-    [self.view addSubview:self.carOne];
     self.carOne.center = CGPointMake(120, 987);
+    [self.view insertSubview:self.carOne aboveSubview:self.bgView];
+
+    self.car = [[WXYOtherCarView alloc] init];
+    [self.view insertSubview:self.car aboveSubview:self.bgView];
+    self.car.center = CGPointMake(731, 562);
+    
     
     
 }
@@ -76,6 +88,7 @@
     [super viewDidAppear:animated];
     [self startMyCar];
     [self startCarOne];
+    [self startCar];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -84,6 +97,56 @@
 }
 
 #pragma mark - Animation
+- (void)startCar
+{
+    //731 562
+    //604 519
+    //604 804
+    //629 836
+    //731 841
+
+    
+    [UIView animateKeyframesWithDuration:4.f delay:0.f options:UIViewKeyframeAnimationOptionRepeat animations:^{
+        [UIView addKeyframeWithRelativeStartTime:0.f relativeDuration:0.02f animations:^{
+            self.car.degree = 290.f;
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.f relativeDuration:0.25f animations:^{
+            self.car.center = CGPointMake(604, 519);
+        }];
+
+        /////
+        [UIView addKeyframeWithRelativeStartTime:0.25f relativeDuration:0.02f animations:^{
+            self.car.degree = 180.f;
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.25f relativeDuration:0.35f animations:^{
+            self.car.center = CGPointMake(604, 804);
+        }];
+        
+
+        /////
+        [UIView addKeyframeWithRelativeStartTime:0.7f relativeDuration:0.02f animations:^{
+            self.car.degree = 135.f;
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.7f relativeDuration:0.05f animations:^{
+            self.car.center = CGPointMake(629, 836);
+        }];
+        
+        /////
+        [UIView addKeyframeWithRelativeStartTime:0.75f relativeDuration:0.02f animations:^{
+            self.car.degree = 90.f;
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.75f relativeDuration:0.25f animations:^{
+            self.car.center = CGPointMake(761, 841);
+        }];
+        
+        
+        
+    } completion:^(BOOL finished) {
+        self.car.center = CGPointMake(731, 562);
+    }];
+    
+    
+}
 - (void)startMyCar
 {
 
@@ -181,9 +244,32 @@
 }
 - (IBAction)loginButtonPressed:(id)sender
 {
+    [self addChildViewController:self.loginVC];
+    [self.view addSubview:self.loginVC.view];
+    self.loginVC.view.alpha = 0.f;
+    [UIView animateWithDuration:0.3f animations:^{
+        self.loginVC.view.alpha = 1.f;
+    }];
 }
-
+- (void)dangerDetect
+{
+    [self.car beginFlash];
+    [self performSelector:@selector(dangerEnd) withObject:nil afterDelay:3.f];
+}
+- (void)dangerEnd
+{
+    self.dangerButton.userInteractionEnabled = YES;
+    self.dangerButton.selected = NO;
+    [self.myCar endWarning];
+    [self.car endFlash];
+}
 - (IBAction)dangerButtonPressed:(id)sender {
+//        [self.myCar endWarning];
+    self.dangerButton.selected = YES;
+    self.dangerButton.userInteractionEnabled = NO;
+    [self.myCar beginWarning];
+    [self performSelector:@selector(dangerDetect) withObject:nil afterDelay:3.f];
+    
 }
 
 - (IBAction)helpButtonPressed:(id)sender
@@ -197,19 +283,20 @@
 }
 - (IBAction)evaluateButtonPressed:(id)sender
 {
-//    [self.myCar beginWarning];
+
 //    [self.myCar beginFocus];
 //    [self.myCar beginFlash];
-    [self.carOne beginFlash];
+//    [self.carOne beginFlash];
 }
 - (IBAction)matchButtonPressed:(id)sender
 {
-//    [self.myCar endWarning];
+
 //    [self.myCar endFocus];
 //    [self.myCar endFlash];
-    [self.carOne endFlash];
+//    [self.carOne endFlash];
 }
 
 - (IBAction)settingButtonPressed:(id)sender {
+//    [self.myCar beginFocus];
 }
 @end

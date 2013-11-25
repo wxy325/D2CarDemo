@@ -46,7 +46,12 @@
         case 2:
             self.helpWait.hidden = NO;
             self.view.userInteractionEnabled = NO;
-            [self performSelector:@selector(helpSucceed) withObject:nil afterDelay:2.f];
+            
+            [self.vc.myCar beginWarning];
+            
+            
+            
+            [self performSelector:@selector(helpSucceed) withObject:nil afterDelay:4.f];
             
     }
     self.state++;
@@ -58,7 +63,8 @@
     self.helpText.hidden = YES;
     self.helpWait.hidden = YES;
     self.helpSuccess.hidden = NO;
-    [self performSelector:@selector(helpFinish) withObject:nil afterDelay:1.f];
+    [self performSelector:@selector(helpFinish) withObject:nil afterDelay:3.f];
+    [self.vc.car beginFocus];
 }
 
 - (void)helpFinish
@@ -70,6 +76,8 @@
         [self.view removeFromSuperview];
         [self removeFromParentViewController];
         self.vc.helpVC = nil;
+        [self.vc.myCar endWarning];
+        [self.vc.car endFocus];
     }];
 }
 - (void)didReceiveMemoryWarning

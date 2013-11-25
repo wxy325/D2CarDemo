@@ -104,6 +104,8 @@
                                 <state key="normal" backgroundImage="button_jinji">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="danger_button_hl"/>
+                                <state key="highlighted" image="danger_button_hl"/>
                                 <connections>
                                     <action selector="dangerButtonPressed:" destination="Nse-u3-7Fn" eventType="touchUpInside" id="By8-tZ-ZJr"/>
                                 </connections>
@@ -141,10 +143,47 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bgView" destination="g3I-T1-8Di" id="xX0-aG-C7U"/>
+                        <outlet property="dangerButton" destination="BPd-VD-cHk" id="7no-yA-jae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dA0-ki-V6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727" y="-237"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="2eV-tX-Ptl">
+            <objects>
+                <viewController restorationIdentifier="WXYLoginViewController" storyboardIdentifier="WXYLoginViewController" id="PkI-cR-tXA" customClass="WXYLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z9n-bc-Qe4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loginPanel" id="NUD-14-TrN">
+                                <rect key="frame" x="164" y="417" width="440" height="189"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loginPasswd" id="fDl-OX-8B4">
+                                <rect key="frame" x="334" y="510" width="107" height="6"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loginText" id="G8B-IX-zUV">
+                                <rect key="frame" x="334" y="466" width="81" height="12"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginPanel" destination="NUD-14-TrN" id="Qyx-Ok-Rpe"/>
+                        <outlet property="loginPasswd" destination="fDl-OX-8B4" id="7Zu-AS-DlW"/>
+                        <outlet property="loginText" destination="G8B-IX-zUV" id="PBC-ZB-3bn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDM-PG-vcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909" y="953"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="ars-9N-wCF">
@@ -197,11 +236,15 @@
         <image name="button_login" width="43" height="70"/>
         <image name="button_match" width="50" height="70"/>
         <image name="button_setting" width="50" height="70"/>
+        <image name="danger_button_hl" width="58" height="71"/>
         <image name="helpFocus" width="8" height="8"/>
         <image name="helpPanel" width="440" height="252"/>
         <image name="helpSucceed" width="440" height="178"/>
         <image name="helpText" width="184" height="8"/>
         <image name="helpWait" width="440" height="252"/>
+        <image name="loginPanel" width="440" height="189"/>
+        <image name="loginPasswd" width="107" height="6"/>
+        <image name="loginText" width="81" height="12"/>
         <image name="main_background" width="768" height="1024"/>
         <image name="main_bluetooth" width="80" height="80"/>
         <image name="main_music" width="80" height="80"/>

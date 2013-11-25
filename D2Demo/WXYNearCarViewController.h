@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WXYMyCarView.h"
+#import "WXYOtherCarView.h"
 
 @class WXYHelpViewController;
+@class WXYLoginViewController;
 
 @interface WXYNearCarViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *bgView;
 - (IBAction)loginButtonPressed:(id)sender;
 - (IBAction)dangerButtonPressed:(id)sender;
 - (IBAction)helpButtonPressed:(id)sender;
@@ -19,5 +23,11 @@
 - (IBAction)settingButtonPressed:(id)sender;
 
 @property (strong, nonatomic) WXYHelpViewController* helpVC;
+@property (strong, nonatomic) WXYLoginViewController* loginVC;
+@property (weak, nonatomic) IBOutlet UIButton *dangerButton;
+
+@property (strong, nonatomic) WXYMyCarView* myCar;
+@property (strong, nonatomic) WXYOtherCarView* carOne;
+@property (strong, nonatomic) WXYOtherCarView* car;
 
 @end
