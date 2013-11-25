@@ -12,7 +12,7 @@
 
 -(id)init
 {
-    self = [super initWithImage:[UIImage imageNamed:@"otherCar.png"]];
+    self = [super initWithImage:[UIImage imageNamed:@"otherCar.png"] circle:[UIImage imageNamed:@"green_circle.png"]];
     if (self)
     {
         

@@ -197,9 +197,13 @@
 }
 - (IBAction)evaluateButtonPressed:(id)sender
 {
-
+//    [self.myCar beginWarning];
+    [self.myCar beginFocus];
 }
-- (IBAction)matchButtonPressed:(id)sender {
+- (IBAction)matchButtonPressed:(id)sender
+{
+//    [self.myCar endWarning];
+    [self.myCar endFocus];
 }
 
 - (IBAction)settingButtonPressed:(id)sender {
