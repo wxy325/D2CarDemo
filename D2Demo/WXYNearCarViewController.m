@@ -9,6 +9,7 @@
 #import "WXYNearCarViewController.h"
 #import "WXYMyCarView.h"
 #import "WXYOtherCarView.h"
+#import "WXYHelpViewController.h"
 
 
 
@@ -16,7 +17,11 @@
 
 @property (strong, nonatomic) WXYMyCarView* myCar;
 
+@property (strong, nonatomic) UIStoryboard* storyBoard;
+
 @property (strong, nonatomic) WXYOtherCarView* carOne;
+
+
 
 - (void)startMyCar;
 - (void)startCarOne;
@@ -24,7 +29,23 @@
 @end
 
 @implementation WXYNearCarViewController
-
+- (WXYHelpViewController*)helpVC
+{
+    if (!_helpVC)
+    {
+        _helpVC = [self.storyBoard instantiateViewControllerWithIdentifier:@"WXYHelpViewController"];
+        _helpVC.vc = self;
+    }
+    return _helpVC;
+}
+- (UIStoryboard*)storyBoard
+{
+    if (!_storyBoard)
+    {
+        _storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    }
+    return _storyBoard;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -158,13 +179,21 @@
     
     
 }
-- (IBAction)loginButtonPressed:(id)sender {
+- (IBAction)loginButtonPressed:(id)sender
+{
 }
 
 - (IBAction)dangerButtonPressed:(id)sender {
 }
 
-- (IBAction)helpButtonPressed:(id)sender {
+- (IBAction)helpButtonPressed:(id)sender
+{
+    [self addChildViewController:self.helpVC];
+    [self.view addSubview:self.helpVC.view];
+    self.helpVC.view.alpha = 0.f;
+    [UIView animateWithDuration:0.3f animations:^{
+        self.helpVC.view.alpha = 1.f;
+    }];
 }
 - (IBAction)evaluateButtonPressed:(id)sender
 {

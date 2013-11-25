@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class WXYHelpViewController;
+
 @interface WXYNearCarViewController : UIViewController
 - (IBAction)loginButtonPressed:(id)sender;
 - (IBAction)dangerButtonPressed:(id)sender;
@@ -15,5 +17,7 @@
 - (IBAction)evaluateButtonPressed:(id)sender;
 - (IBAction)matchButtonPressed:(id)sender;
 - (IBAction)settingButtonPressed:(id)sender;
+
+@property (strong, nonatomic) WXYHelpViewController* helpVC;
 
 @end

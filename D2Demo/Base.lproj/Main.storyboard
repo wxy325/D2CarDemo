@@ -146,6 +146,49 @@
             </objects>
             <point key="canvasLocation" x="727" y="-237"/>
         </scene>
+        <!--Help View Controller-->
+        <scene sceneID="ars-9N-wCF">
+            <objects>
+                <viewController storyboardIdentifier="WXYHelpViewController" id="ogv-yY-EMN" customClass="WXYHelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZA-xa-CUh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="helpPanel" id="eHC-q8-VM8">
+                                <rect key="frame" x="162" y="387" width="440" height="252"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="helpFocus" id="BOG-P6-XaY">
+                                <rect key="frame" x="419" y="498" width="8" height="8"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="helpText" id="7WW-P2-Blt">
+                                <rect key="frame" x="237" y="529" width="184" height="8"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="helpWait" id="4MW-h1-izK">
+                                <rect key="frame" x="166" y="384" width="440" height="252"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="helpSucceed" id="QEF-mU-epS">
+                                <rect key="frame" x="166" y="436" width="440" height="178"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="helpFocus" destination="BOG-P6-XaY" id="4pe-Z1-lOU"/>
+                        <outlet property="helpPanel" destination="eHC-q8-VM8" id="JUu-et-vur"/>
+                        <outlet property="helpSuccess" destination="QEF-mU-epS" id="Lky-CF-Thq"/>
+                        <outlet property="helpText" destination="7WW-P2-Blt" id="SBU-vO-x5K"/>
+                        <outlet property="helpWait" destination="4MW-h1-izK" id="QCm-Gv-coY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnK-lQ-QAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="1163"/>
+        </scene>
     </scenes>
     <resources>
         <image name="button_comment" width="50" height="70"/>
@@ -154,6 +197,11 @@
         <image name="button_login" width="43" height="70"/>
         <image name="button_match" width="50" height="70"/>
         <image name="button_setting" width="50" height="70"/>
+        <image name="helpFocus" width="8" height="8"/>
+        <image name="helpPanel" width="440" height="252"/>
+        <image name="helpSucceed" width="440" height="178"/>
+        <image name="helpText" width="184" height="8"/>
+        <image name="helpWait" width="440" height="252"/>
         <image name="main_background" width="768" height="1024"/>
         <image name="main_bluetooth" width="80" height="80"/>
         <image name="main_music" width="80" height="80"/>
