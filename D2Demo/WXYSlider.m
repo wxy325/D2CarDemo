@@ -27,7 +27,6 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"aa");
     UITouch* touch = [touches anyObject];
     CGPoint point = [touch locationInView:self];
     point = point.x > 283? CGPointMake(283, point.y) : point;
