@@ -10,7 +10,7 @@
 
 #import "WXYHelpViewController.h"
 #import "WXYLoginViewController.h"
-
+#import "WXYEvalueViewController.h"
 
 @interface WXYNearCarViewController ()
 
@@ -18,8 +18,7 @@
 
 @property (strong, nonatomic) UIStoryboard* storyBoard;
 
-
-
+@property (assign, nonatomic) BOOL isCarSelected;
 
 - (void)startMyCar;
 - (void)startCarOne;
@@ -27,6 +26,15 @@
 @end
 
 @implementation WXYNearCarViewController
+- (WXYEvalueViewController*)evalueVC
+{
+    if (!_evalueVC)
+    {
+        _evalueVC = [self.storyBoard instantiateViewControllerWithIdentifier:@"WXYEvalueViewController"];
+        _evalueVC.vc = self;
+    }
+    return _evalueVC;
+}
 - (WXYLoginViewController*)loginVC
 {
     if (!_loginVC)
@@ -79,7 +87,7 @@
     [self.view insertSubview:self.car aboveSubview:self.bgView];
     self.car.center = CGPointMake(731, 562);
     
-    
+    self.isCarSelected = NO;
     
 }
 
@@ -106,7 +114,7 @@
     //731 841
 
     
-    [UIView animateKeyframesWithDuration:4.f delay:0.f options:UIViewKeyframeAnimationOptionRepeat animations:^{
+    [UIView animateKeyframesWithDuration:5.f delay:0.5f options:UIViewKeyframeAnimationOptionRepeat animations:^{
         [UIView addKeyframeWithRelativeStartTime:0.f relativeDuration:0.02f animations:^{
             self.car.degree = 290.f;
         }];
@@ -136,13 +144,14 @@
             self.car.degree = 90.f;
         }];
         [UIView addKeyframeWithRelativeStartTime:0.75f relativeDuration:0.25f animations:^{
-            self.car.center = CGPointMake(761, 841);
+            self.car.center = CGPointMake(781, 841);
         }];
         
         
         
     } completion:^(BOOL finished) {
-        self.car.center = CGPointMake(731, 562);
+        self.car.center = CGPointMake(771, 582);
+        self.car.degree = 290.f;
     }];
     
     
@@ -150,7 +159,7 @@
 - (void)startMyCar
 {
 
-    [UIView animateKeyframesWithDuration:5.f delay:1.5f options:UIViewKeyframeAnimationOptionRepeat animations:^{
+    [UIView animateKeyframesWithDuration:5.f delay:0.f options:UIViewKeyframeAnimationOptionRepeat animations:^{
         [UIView addKeyframeWithRelativeStartTime:0.f relativeDuration:0.02f animations:^{
             self.myCar.degree = 45.f;
         }];
@@ -283,10 +292,15 @@
 }
 - (IBAction)evaluateButtonPressed:(id)sender
 {
-
-//    [self.myCar beginFocus];
-//    [self.myCar beginFlash];
-//    [self.carOne beginFlash];
+    if (self.isCarSelected)
+    {
+        [self addChildViewController:self.evalueVC];
+        [self.view addSubview:self.evalueVC.view];
+        self.evalueVC.view.alpha = 0.f;
+        [UIView animateWithDuration:0.3f animations:^{
+            self.evalueVC.view.alpha = 1.f;
+        }];
+    }
 }
 - (IBAction)matchButtonPressed:(id)sender
 {
@@ -298,5 +312,27 @@
 
 - (IBAction)settingButtonPressed:(id)sender {
 //    [self.myCar beginFocus];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch* touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self.view];
+    CGRect rect = CGRectMake(599, 515, 169, 357);
+    
+    if (CGRectContainsPoint(rect, location))
+    {
+        self.isCarSelected = !self.isCarSelected;
+        
+        if (self.isCarSelected)
+        {
+            [self.car beginFocus];
+        }
+        else
+        {
+            [self.car endFocus];
+        }
+    }
+    
 }
 @end

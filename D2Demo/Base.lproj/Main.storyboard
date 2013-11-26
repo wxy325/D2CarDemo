@@ -228,6 +228,49 @@
             </objects>
             <point key="canvasLocation" x="369" y="1163"/>
         </scene>
+        <!--Evalue View Controller-->
+        <scene sceneID="6Rk-Oq-eWA">
+            <objects>
+                <viewController restorationIdentifier="WXYEvalueViewController" storyboardIdentifier="WXYEvalueViewController" id="Rrb-tJ-LEt" customClass="WXYEvalueViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DT9-xg-bWA">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="evalueBackground" id="3Rs-C3-NS4">
+                                <rect key="frame" x="164" y="316" width="440" height="408"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9PT-cu-3yC">
+                                <rect key="frame" x="233" y="636" width="70" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="evalueButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" id="AEp-Wo-ywZ">
+                                <rect key="frame" x="243" y="401" width="283" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oJx-Ia-CXL">
+                                <rect key="frame" x="368" y="440" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="oJx-Ia-CXL" id="VGg-sT-tH8"/>
+                        <outlet property="sliderContainer" destination="AEp-Wo-ywZ" id="ocz-9Y-rrM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7P-fG-XTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="2992"/>
+        </scene>
     </scenes>
     <resources>
         <image name="button_comment" width="50" height="70"/>
@@ -237,6 +280,8 @@
         <image name="button_match" width="50" height="70"/>
         <image name="button_setting" width="50" height="70"/>
         <image name="danger_button_hl" width="58" height="71"/>
+        <image name="evalueBackground" width="440" height="408"/>
+        <image name="evalueButton" width="70" height="20"/>
         <image name="helpFocus" width="8" height="8"/>
         <image name="helpPanel" width="440" height="252"/>
         <image name="helpSucceed" width="440" height="178"/>

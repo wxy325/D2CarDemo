@@ -10,6 +10,7 @@
 #import "WXYMyCarView.h"
 #import "WXYOtherCarView.h"
 
+@class WXYEvalueViewController;
 @class WXYHelpViewController;
 @class WXYLoginViewController;
 
@@ -24,6 +25,7 @@
 
 @property (strong, nonatomic) WXYHelpViewController* helpVC;
 @property (strong, nonatomic) WXYLoginViewController* loginVC;
+@property (strong, nonatomic) WXYEvalueViewController* evalueVC;
 @property (weak, nonatomic) IBOutlet UIButton *dangerButton;
 
 @property (strong, nonatomic) WXYMyCarView* myCar;

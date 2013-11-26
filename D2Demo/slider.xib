@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WXYSlider"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dER-oe-iYZ" customClass="WXYSlider">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="31"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sliderLine" translatesAutoresizingMaskIntoConstraints="NO" id="h6F-Vz-Fmu">
+                    <rect key="frame" x="2" y="15" width="281" height="2"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sliderLineSelect" translatesAutoresizingMaskIntoConstraints="NO" id="7Q9-a2-wTQ">
+                    <rect key="frame" x="0.0" y="14" width="37" height="3"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sliderDot" translatesAutoresizingMaskIntoConstraints="NO" id="NpN-Ty-Dwl">
+                    <rect key="frame" x="33" y="11" width="10" height="10"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sliderDot" destination="NpN-Ty-Dwl" id="apo-FF-ZoK"/>
+                <outlet property="sliderLine" destination="h6F-Vz-Fmu" id="79n-ET-Wbr"/>
+                <outlet property="sliderSelect" destination="7Q9-a2-wTQ" id="OGJ-5f-tlD"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="sliderDot" width="10" height="10"/>
+        <image name="sliderLine" width="281" height="2"/>
+        <image name="sliderLineSelect" width="37" height="3"/>
+    </resources>
+</document>

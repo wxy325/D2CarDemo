@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180DE404184448F700D89FDB /* WXYEvalueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DE403184448F700D89FDB /* WXYEvalueViewController.m */; };
+		180DE4071844556200D89FDB /* WXYSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DE4061844556200D89FDB /* WXYSlider.m */; };
+		180DE4091844567400D89FDB /* slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180DE4081844567400D89FDB /* slider.xib */; };
 		18636DBF18425BDB0081459A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18636DBE18425BDB0081459A /* Foundation.framework */; };
 		18636DC118425BDB0081459A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18636DC018425BDB0081459A /* CoreGraphics.framework */; };
 		18636DC318425BDB0081459A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18636DC218425BDB0081459A /* UIKit.framework */; };
@@ -41,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180DE402184448F700D89FDB /* WXYEvalueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXYEvalueViewController.h; sourceTree = "<group>"; };
+		180DE403184448F700D89FDB /* WXYEvalueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYEvalueViewController.m; sourceTree = "<group>"; };
+		180DE4051844556200D89FDB /* WXYSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXYSlider.h; sourceTree = "<group>"; };
+		180DE4061844556200D89FDB /* WXYSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXYSlider.m; sourceTree = "<group>"; };
+		180DE4081844567400D89FDB /* slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = slider.xib; sourceTree = "<group>"; };
 		18636DBB18425BDB0081459A /* D2Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18636DBE18425BDB0081459A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		18636DC018425BDB0081459A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +156,8 @@
 				18DE23341843B330005B8565 /* WXYHelpViewController.m */,
 				18DE23361843C6AA005B8565 /* WXYLoginViewController.h */,
 				18DE23371843C6AA005B8565 /* WXYLoginViewController.m */,
+				180DE402184448F700D89FDB /* WXYEvalueViewController.h */,
+				180DE403184448F700D89FDB /* WXYEvalueViewController.m */,
 			);
 			path = D2Demo;
 			sourceTree = "<group>";
@@ -185,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				18636E02184266D40081459A /* car */,
+				180DE4051844556200D89FDB /* WXYSlider.h */,
+				180DE4061844556200D89FDB /* WXYSlider.m */,
+				180DE4081844567400D89FDB /* slider.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -281,6 +294,7 @@
 			files = (
 				18636DD718425BDB0081459A /* Images.xcassets in Resources */,
 				18636DC918425BDB0081459A /* InfoPlist.strings in Resources */,
+				180DE4091844567400D89FDB /* slider.xib in Resources */,
 				18636DD218425BDB0081459A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,10 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18636DF518425D510081459A /* WXYNearCarViewController.m in Sources */,
+				180DE404184448F700D89FDB /* WXYEvalueViewController.m in Sources */,
 				18636DFE184263E60081459A /* WXYCar.m in Sources */,
 				18DE23351843B330005B8565 /* WXYHelpViewController.m in Sources */,
 				18636DCB18425BDB0081459A /* main.m in Sources */,
 				18636DD518425BDB0081459A /* WXYViewController.m in Sources */,
+				180DE4071844556200D89FDB /* WXYSlider.m in Sources */,
 				18DE23381843C6AA005B8565 /* WXYLoginViewController.m in Sources */,
 				18636DFB1842601C0081459A /* WXYOtherCarView.m in Sources */,
 				18636DCF18425BDB0081459A /* WXYAppDelegate.m in Sources */,
